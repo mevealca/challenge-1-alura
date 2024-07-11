@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reto Encriptador</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <header>
+      <h1 class="presentacion__titulo">Sistema de Encriptador</h1>
+    </header>
+    <main class="presentacion">
+      <section class="presentacion__cuerpo">
+        <section>
+          <section class="presentacion__text">
+            <textarea
+              class="presentacion__panel_texto"
+              placeholder="Ingrese su texto aqui"
+              
+              onkeyup="corregirTexto()"
+              id="textoPanel" 
+            ></textarea>
+          </section>
+          <div class="presentacion__cuerpo__informacion">
+              <i class="fa-solid fa-circle-info"></i>
+              <label class="presentacion__Advertencia__texto"> Solo letras minusculas y sin acento</label>
+         </div>
+        
+          <section class="presentacion__botones">
+            <button class="presentacion__botones_encriptar" onclick="encriptar()">Encriptar</button>
+            <button class="presentacion__botones_desencriptar" onclick="desencriptar()">
+              Desencriptar
+            </button>
+          </section>
+        </section>
+        <section class="Presentacion__panel__resultado">
+          <div>
+             <label class="presentacion__panel__titulo">Ningun Mensaje fue encontrado</label>
+             <p class="presentacion__panel__subtitulo">Ingresa el texto que desees encriptar o desencriptar</p>
+        </div>
+        <div class="presentacion__panel__boton">
+          <button class="presentacion__panel__boton__copiar" id="boton__copiar" hidden onclick="copiarResultado()">Copiar</button>
+        </div>
+        </section>
+      </section>
+    </main>
+    <footer class="footer">
+      <label class="footer__label"> </label>
+      <label class="footer__label__year"></label>
+    </footer>
+  </body>
+
+  <script src="js/scripts.js"></script>
+</html>
